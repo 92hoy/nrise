@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6780baee-04b3-46c9-8e98-97bb630dc684" name="Default Changelist" comment="" />
+    <list default="true" id="6780baee-04b3-46c9-8e98-97bb630dc684" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d615edf1-7ca2-4cda-bdf4-c5ed5eb4f0af.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d615edf1-7ca2-4cda-bdf4-c5ed5eb4f0af.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/serializers.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +23,40 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nrise@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nrise@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nrise@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nrise: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nrise@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nrise: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="session: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1omn4PKzKDMVB291iow3Ofrs1Bc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,6 +65,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/migrations" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -105,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613900441605</updated>
       <workItem from="1613900442829" duration="7674000" />
-      <workItem from="1613913040203" duration="514000" />
+      <workItem from="1613913040203" duration="1733000" />
     </task>
     <servers />
   </component>
@@ -141,13 +174,21 @@
       <screen x="0" y="25" width="2560" height="1295" />
     </state>
     <state x="517" y="301" key="SettingsEditor/0.25.2560.1295@0.25.2560.1295" timestamp="1613901473355" />
+    <state x="1644" y="174" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1613914910862">
+      <screen x="0" y="25" width="2560" height="1295" />
+    </state>
+    <state x="1644" y="174" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.25.2560.1295@0.25.2560.1295" timestamp="1613914910862" />
+    <state x="1137" y="406" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1613914130479">
+      <screen x="0" y="25" width="2560" height="1295" />
+    </state>
+    <state x="1137" y="406" key="com.intellij.database.view.ui.DbObjectDialog/0.25.2560.1295@0.25.2560.1295" timestamp="1613914130479" />
     <state x="674" y="300" width="667" height="729" key="find.popup" timestamp="1613911980246">
       <screen x="0" y="25" width="2560" height="1295" />
     </state>
     <state x="674" y="300" width="667" height="729" key="find.popup/0.25.2560.1295@0.25.2560.1295" timestamp="1613911980246" />
-    <state x="1264" y="358" width="670" height="676" key="search.everywhere.popup" timestamp="1613913551735">
+    <state x="1264" y="358" width="670" height="676" key="search.everywhere.popup" timestamp="1613914531538">
       <screen x="0" y="25" width="2560" height="1295" />
     </state>
-    <state x="1264" y="358" width="670" height="676" key="search.everywhere.popup/0.25.2560.1295@0.25.2560.1295" timestamp="1613913551735" />
+    <state x="1264" y="358" width="670" height="676" key="search.everywhere.popup/0.25.2560.1295@0.25.2560.1295" timestamp="1613914531538" />
   </component>
 </project>
