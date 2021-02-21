@@ -1671,7 +1671,6 @@ model</ColNames>
     <column id="388" parent="290" name="last_login">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="389" parent="290" name="last_logout">
@@ -1679,7 +1678,7 @@ model</ColNames>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="290" name="create_date">
+    <column id="390" parent="290" name="created_date">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>

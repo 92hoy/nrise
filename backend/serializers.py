@@ -7,4 +7,10 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.all()
         model = User
         fields = '__all__'
-        # fields = ('id', 'created_at', 'title', 'category', 'star_rating',)  # req, res 시 사용되길 원하는 필드(컬럼)만 적어줘도 됨.
+        # fields = ('user_id', 'user_name', 'create_date')
+
+
+class UserSerializer_check(serializers.Serializer):
+    user_id = serializers.CharField(help_text=''' 사용할 아이디''', required=True, allow_blank=True)
+    username = serializers.CharField(help_text=''' 사용자 이름 ''', required=True, allow_blank=True)
+    password = serializers.CharField(help_text=''' 비밀번호 ''', required=True, allow_blank=True)

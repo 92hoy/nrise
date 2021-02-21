@@ -137,9 +137,9 @@ class User(models.Model):
     password = models.CharField(max_length=255)
     username = models.CharField(max_length=50)
     del_yn = models.CharField(max_length=2)
-    last_login = models.DateTimeField()
+    last_login = models.DateTimeField(blank=True, null=True)
     last_logout = models.DateTimeField(blank=True, null=True)
-    create_date = models.DateTimeField(blank=True, null=True)
+    created_date = models.DateTimeField(blank=True, null=True)
     modify_date = models.DateTimeField(blank=True, null=True)
 
     class Meta:
