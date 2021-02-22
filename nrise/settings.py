@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for nrise project.
 
@@ -19,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# 원래는 ignore 처리하여 공개되지않는게 맞으나 테스트 이니 별도의처리는 하지않습니다.
 SECRET_KEY = '7n$p_$9i&o=#8yhaonxh5(i643gypx%#e0q010&g^ij82jcg&s'
+ALGORITHM = 'HS256'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -35,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend',
     'rest_framework_swagger',
     'drf_yasg',
     'rest_framework',
+    'api'
 ]
 
 MIDDLEWARE = [

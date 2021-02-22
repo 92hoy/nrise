@@ -1,2 +1,4 @@
- backend/__pycache__/*
- .idea
+*.pyc 
+venv
+__pycache__
+/idea

@@ -34,13 +34,9 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
-# from backend.urls import main
-
-from backend.djangoapps.main import views as main_views
-
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path("api/", include(("backend.urls", "api"))),
+    path("api/", include(("api.urls", "api"))),
 ]
 
 # urlpatterns = [

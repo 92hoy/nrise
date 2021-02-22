@@ -1,4 +1,4 @@
-from backend.models import *
+from .models import *
 from rest_framework import serializers
 
 
@@ -8,6 +8,13 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
         # fields = ('user_id', 'user_name', 'create_date')
+
+
+class SessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        session = Session.objects.all()
+        model = session
+        fields = '__all__'
 
 
 class UserSerializer_check(serializers.Serializer):
