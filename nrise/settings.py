@@ -24,6 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '7n$p_$9i&o=#8yhaonxh5(i643gypx%#e0q010&g^ij82jcg&s'
 ALGORITHM = 'HS256'
 
+
+'''
+session
+'''
+SESSION_COOKIE_AGE = 10
+SESSION_SAVE_EVERY_REQUEST = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

@@ -3,14 +3,16 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from .models import User
+from .models import User,Session
 from .serializers import UserSerializer, UserSerializer_check
 from django.db.models import Count
 from django.http import HttpResponse, JsonResponse, Http404
+from nrise.settings import SECRET_KEY, ALGORITHM
 import json
+import requests
 import jwt
 import bcrypt
-from nrise.settings import SECRET_KEY, ALGORITHM
+from ipware.ip import get_client_ip
 
 
 # Create your views here.
@@ -25,17 +27,16 @@ class UserView(APIView):
     def post(self, request, format=None):
         data = request.data
         check = User.objects.filter(del_yn='N', user_id=data['user_id']).annotate(Count('id'))
+
         if len(check) > 0:
             return Response("이미 사용중인 아이디입니다", status=500)
         else:
             User(
                 user_id=data['user_id'],
-                password=bcrypt.hashpw(data['password'].encode('utf-8'), bcrypt.gensalt()).decode(),
-                username=data['username']
+                password=bcrypt.hashpw(data['password'].encode('utf-8'), bcrypt.gensalt()).decode()
             ).save()
             # user_serializer = UserSerializer(data=request.data, partial=True)
-            r_data = User.objects.filter(user_id=data['user_id'], del_yn='N').values('user_id', 'username',
-                                                                                     'created_date')
+            r_data = User.objects.filter(user_id=data['user_id'], del_yn='N').values('user_id','created_date')
             return Response(r_data, status=status.HTTP_201_CREATED)
 
         # password = data['password'].encode('utf-8')
@@ -110,6 +111,27 @@ class SignView(APIView):
                 print('-----check')
                 if bcrypt.checkpw(data['password'].encode('utf-8'), account.password.encode('utf-8')):
                     token = jwt.encode({'user_id': account.id}, SECRET_KEY, algorithm=ALGORITHM)
+
+
+                    if not request.session.session_key:
+                        print('save')
+                        request.session.save()
+
+                    request.session['test'] = 'Test'
+                    print('request.session', request.session.session_key)
+                    print('request.session[test]',request.session['test'])
+                    print(type(request.session.session_key))
+                    session_id = str(request.session.session_key)
+                    print('get_client_ip(request)',type(get_client_ip(request)))
+                    ip,tmp  =get_client_ip(request)
+                    Session(
+                        user_id=data['user_id'],
+                        session_key=session_id,
+                        ip_address=ip,
+                        login_yn='Y'
+                    ).save()
+
+                    # session insert --------here
 
                     return Response('Login Success', status=200)
 
