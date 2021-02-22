@@ -19,5 +19,4 @@ class SessionSerializer(serializers.ModelSerializer):
 
 class UserSerializer_check(serializers.Serializer):
     user_id = serializers.CharField(help_text=''' 사용할 아이디''', required=True, allow_blank=True)
-    username = serializers.CharField(help_text=''' 사용자 이름 ''', required=True, allow_blank=True)
     password = serializers.CharField(help_text=''' 비밀번호 ''', required=True, allow_blank=True)
