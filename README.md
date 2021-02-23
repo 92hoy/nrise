@@ -36,3 +36,38 @@ port = 3306
 DATABASE = nrise
 PASSWORD = 0000
 ```
+
+
+## 회원가입
+-[POST]    /api/v1/user      
+```
+[form-data]
+user_id
+password
+```
+## 회원조회
+-[GET] /api/v1/user   
+```
+[form-data]
+id (회원고유값 PK)
+```
+## 회원탈퇴
+-[DELETE]    /api/v1/user     
+```
+[form-data]
+session_key(세션 고유값)
+```
+## 로그인
+-[PUT] /api/v1/sign     
+```
+[form-data]
+user_id
+password
+```
+## 로그아웃
+-[DELETE]  /api/v1/sign      
+```
+[form-data]
+session_key(세션 고유값)
+
+```
