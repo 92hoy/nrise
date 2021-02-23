@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from .models import User, Session
-from .serializers import UserSerializer, UserSerializer_check
+from .serializers import *
 from django.db.models import Count
 from django.utils import timezone
 from django.http import HttpResponse, JsonResponse, Http404
@@ -25,6 +25,7 @@ class UserView(APIView):
     @swagger_auto_schema(
         operation_summary="유저 생성",
         operation_description="post : /api/v1/user",
+        request_body =CreateSerializer
     )
     def post(self, request, format=None):
         data = request.data
@@ -67,6 +68,7 @@ class UserView(APIView):
     @swagger_auto_schema(
         operation_summary="유저 탈퇴",
         operation_description="delete : /api/v1/user",
+        request_body=DeleteSerializer,
     )
     def delete(self, request):
         session_key = request.data['session_key']
@@ -91,6 +93,8 @@ class SignView(APIView):
     @swagger_auto_schema(
         operation_summary="로그인",
         operation_description="put : /api/v1/sign",
+        request_body=LoginSerializer,
+
     )
     def put(self, request, format=None):
         data = request.data
@@ -145,9 +149,12 @@ class SignView(APIView):
     @swagger_auto_schema(
         operation_summary="로그아웃",
         operation_description="delete : /api/v1/sign",
+        request_body=LogoutSerializer,
     )
+
     def delete(self, request):
         session_key = request.data['session_key']
+        # serializer_class = LogoutSerializer
         try:
             # user_id catch
             if Session.objects.filter(session_key=session_key).latest('user_id'):
